@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Generator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Question Generator</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="file">Upload PDF or PPTX:</label>
+            <input type="file" id="file" name="file" accept=".pdf,.pptx" required>
+
+            <label for="difficulty">Select Difficulty:</label>
+            <select id="difficulty" name="difficulty" required>
+                <option value="" disabled selected>Select</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <label for="numQuestions">Number of Questions:</label>
+            <input type="number" id="numQuestions" name="numQuestions" min="1" required>
+
+            <button type="submit">Generate Questions</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
